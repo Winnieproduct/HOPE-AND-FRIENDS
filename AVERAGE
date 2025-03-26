@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float physicsmarks[4];
+    float chemistrymarks[4];
+    float mathmarks[4];
+    float physicsAvg,chemistryAvg,mathAvg,totalAvg;
+
+    printf("enter marks for physics test\n");
+    printf("assignment");
+    scanf("%f", &physicsmarks[0]);
+    printf("coursework");
+    scanf("%f",&physicsmarks[1]);
+    printf("midterm");
+    scanf("%f",&physicsmarks[2]);
+    printf("end of term");
+    scanf("%f",&physicsmarks[3]);
+
+    printf("enter marks for chemistry test\n");
+    printf("assignment");
+    scanf("%f",&chemistrymarks[0]);
+    printf("coursework");
+    scanf("%f",&chemistrymarks[1]);
+    printf("midterm");
+    scanf("%f",&chemistrymarks[2]);
+    printf("end of term");
+    scanf("%f",&chemistrymarks[3]);
+
+    printf("enter the marks for math test\n");
+    printf("assignment");
+    scanf("%f",&mathmarks[0]);
+    printf("coursework");
+    scanf("%f",&mathmarks[1]);
+    printf("midterm");
+    scanf("%f",&mathmarks[2]);
+    printf("end of term");
+    scanf("%f",&mathmarks[3]);
+
+    physicsAvg=(physicsmarks[0]+physicsmarks[1]+physicsmarks[2]+physicsmarks[3])/4;
+    chemistryAvg=(chemistrymarks[0]+chemistrymarks[1]+chemistrymarks[2]+chemistrymarks[3])/4;
+    mathAvg=(mathmarks[0]+mathmarks[1]+mathmarks[2]+mathmarks[3])/4;
+    totalAvg=physicsAvg+chemistryAvg+mathAvg/3;
+
+    printf("\nAVG marks for each subject\n");
+    printf("physics:%.2lf\n",physicsAvg);
+    printf("chemistry:%.2lf\n",chemistryAvg);
+    printf("math:%.2lf\n",mathAvg);
+    printf("the TOTAL AVG is %.2lf\n",totalAvg);
+
+
+    return 0;
+}
